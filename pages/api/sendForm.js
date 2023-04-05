@@ -1,7 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-const nodemailer = require('nodemailer')
 
 export default async function sendForm(req, res) {
+
+  const nodemailer = require('nodemailer')
+  
   res.status(200).json({ 
     name: req.body.name,
     number: req.body.number,
