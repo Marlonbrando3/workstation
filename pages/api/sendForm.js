@@ -21,7 +21,7 @@ export default async function sendForm(req, res) {
     })
 
 
-    const mailData = await transporter.sendMail({
+    let mailData = await transporter.sendMail({
       from: req.body.email,
       to: 'www@work-station.pl',
       subject: `Wiadomość ze strony od: ${req.body.name}`,
