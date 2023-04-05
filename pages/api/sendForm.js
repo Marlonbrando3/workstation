@@ -15,14 +15,14 @@ export default async function sendForm(req, res) {
       host: "mail-serwer141299.lh.pl",
       secure: true, // true for 465, false for other ports
       auth: {
-        user: process.env.MAIL_ADRESS, // generated ethereal user
-        pass: process.env.MAIL_PASS, // generated ethereal password
+        user: 'www@work-station.pl', // generated ethereal user
+        pass: 'RQC7L@wE', // generated ethereal password
       },
     })
 
     const mailData = {
       from: req.body.email,
-      to: process.env.MAIL_ADRESS,
+      to: 'www@work-station.pl',
       subject: `Wiadomość ze strony od: ${req.body.name}`,
       text: "Hello. This email is for your email verification.",
       html: 
