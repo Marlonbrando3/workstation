@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Aboutus() {
   return (
     <>
-    <div id="about-us" className="md:mb-20 scroll-smooth"></div>
+    <div id="about-us" className="absolute top-[600px] md:top-[700px] scroll-smooth"></div>
     <div className='w-full md:mt-20'>
         <div className='xl:w-[1140px] h-full mx-auto flex flex-wrap'>
             <div className='lg:w-1/2 md:w-2/3 w-full h-1/2 px-10 flex flex-col justify-center'>
