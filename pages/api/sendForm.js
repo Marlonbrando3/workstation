@@ -19,6 +19,7 @@ export default async function sendForm(req, res) {
         pass: 'RQC7L@wE', // generated ethereal password
       },
     })
+    
 
     const mailData = {
       from: req.body.email,
