@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <div  className='w-screen h-[80px] bg-white fixed'>
         <div className='xl:w-[1140px] w-screen h-full  mx-auto flex justify-between items-center'>
-            <div className='h-full w-64 flex items-center'>
+            <div className='h-full w-64 flex items-center ml-3 md:mr-0'>
                     <Image 
                         src="/work-station-logo-blue-centered.png"
                         width={120}
@@ -53,10 +53,10 @@ export default function Header() {
                     </ul>
                 </nav>
             </div>
-            <div ref={OpenBurger} onClick={showMobileMenu} className='cursor-pointer mr-12 w-12 h-12 visible xl:hidden'>
+            <div ref={OpenBurger} onClick={showMobileMenu} className='cursor-pointer mr-3 md:mr-12 w-12 h-12 visible xl:hidden'>
                 <MenuIcon className='w-full h-full'/>
             </div>
-            <div ref={ClosedBurger} onClick={hideMobileMenu} className='cursor-pointer mr-12 w-12 h-12 hidden xl:hidden'>
+            <div ref={ClosedBurger} onClick={hideMobileMenu} className='cursor-pointer mr-3 md:mr-12 w-12 h-12 hidden xl:hidden'>
             <MenuOpenIcon className='w-full h-full'/>
             </div>
         </div>

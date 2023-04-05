@@ -11,7 +11,7 @@ html{
 @layer components {
 
     .home-view-claim {
-         @apply font-[300] text-slate-800 duration-300 text-3xl bg-white m-1 px-4 py-2 rounded-md hover:bg-gray-100
+         @apply font-[300] text-slate-800 duration-300 md:text-3xl text-xl bg-white m-1 px-4 py-2 rounded-md hover:bg-gray-100
     }
 
     .li-item{
@@ -36,7 +36,7 @@ html{
     }
 
     .textarea {
-        @apply border border-gray-900 rounded-md h-20 my-2 pl-2 pt-2
+        @apply border border-gray-900 rounded-md h-32 my-2 p-2
 
     }
 

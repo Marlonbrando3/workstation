@@ -64,7 +64,7 @@ export default function Contact() {
                 <input required ref={number} className="form-input" placeholder="Numer telefonu do kontaktu" type="number" name="phone"></input>
                 <input required ref={email} className="form-input" placeholder="Adres emial do kontaktu" type="mail" name="email"></input>
                 <textarea required ref={message} className='textarea' type="text" placeholder="Napisz nam jak możemy Ci pomóc np. jakiego rodzaju pracowników potrzebujesz i ilu."></textarea>
-                <div className='flex'>
+                <div className='flex mb-6'>
                     <input required  id="rodo" type='checkbox' className='cursor-pointer w-12 h-6'></input>
                     <div className='text-white text-[14px] pl-2 leading-4'>Wyrażam zgodę na zasady polityki prywatności oraz przetwarzanie danych przez firmę Onesta Group Sp. z o.o. z siedzibą We Wrocławiu </div>
                 </div>

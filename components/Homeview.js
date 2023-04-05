@@ -8,7 +8,7 @@ export default function Homeview() {
     <div id="home" className='w-screen h-[700px] flex'>
     <div className="bg-[url('../public/bg-home.jpeg')] bg-cover flex-grow h-[90%] flex items-center rounded-r-[70px]">
       <div className='w-[1100px] mx-auto'>
-        <div className=' w-[500px] flex flex-wrap'>
+        <div className='md:w-[500px] px-4 md:px-auto w-screen flex flex-wrap'>
           <p className='home-view-claim'>Rekrutacje</p>
           <p className='home-view-claim'>Praca tymczasowa</p>
           <p className='home-view-claim'>Outsourcing personalny</p>
@@ -16,7 +16,7 @@ export default function Homeview() {
           <p className='home-view-claim'>Doradztwo persnalone</p>
           <p className='home-view-claim'>Szkolenia BHP</p>
         </div>
-        <button className='border bg-slate-800 text-white text-2xl mt-5 px-5 py-2 rounded-md cursor pointer duration-300 hover:text-white hover:bg-green-400'>Zapytaj o ofertę</button>
+        <button className='border mx-5 md:mx-auto bg-slate-800 text-white text-2xl mt-5 px-5 py-2 rounded-md cursor pointer duration-300 hover:text-white hover:bg-green-400'>Zapytaj o ofertę</button>
       </div>
     </div>
     <a href="#about-us">
