@@ -30,7 +30,7 @@ export default async (req, res) => {
           res.status(400)
       } else {
           console.log("Server is ready to take our messages");
-          res.status(200)
+          res.status(400)
       }})
 
 
