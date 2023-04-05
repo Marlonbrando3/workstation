@@ -14,7 +14,11 @@ export default async function sendForm(req, res) {
       port: 465,
       host: "mail-serwer141299.lh.pl",
       secure: true, // true for 465, false for other ports
+      tls: {
+        ciphers: "SSLv3",
+      },
       auth: {
+        type: "OAuth2",
         user: 'www@work-station.pl', // generated ethereal user
         pass: 'RQC7L@wE', // generated ethereal password
       },
