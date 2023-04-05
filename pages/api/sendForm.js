@@ -13,7 +13,7 @@ export default async function sendForm(req, res) {
     let transporter = await nodemailer.createTransport({
       port: 465,
       host: "mail-serwer141299.lh.pl",
-      secure: true,
+      secure: true, // true for 465, false for other ports
       tls: {
         ciphers: "SSLv3",
       },
@@ -37,18 +37,16 @@ export default async function sendForm(req, res) {
       `Wiadomość ${req.body.message}`+`<br>`
     }
 
-    await new Promise((resolve, rejected) => {
-      transporter.sendMail(mailData, (err, info) => {
+    await transporter.sendMail(mailData, (err, info) => {
           console.log("wysłane")
           if(err) {
-            console.log(err)
+            res.json({error:err})
             rejected(err)
           }
           else {
-            console.log(info)
-            resolve(info)
+            res.json({info:info})
           }
-        })})
+        })
     res.status(200)
 
 }
