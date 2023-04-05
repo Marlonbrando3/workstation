@@ -19,9 +19,9 @@ export default async function sendForm(req, res) {
         pass: 'RQC7L@wE', // generated ethereal password
       },
     })
-    
 
-    const mailData = {
+
+    const mailData = await transporter.sendMail({
       from: req.body.email,
       to: 'www@work-station.pl',
       subject: `Wiadomość ze strony od: ${req.body.name}`,
@@ -31,15 +31,10 @@ export default async function sendForm(req, res) {
       `Email kontaktowy: ${req.body.email}`+`<br>`+
       `Telefon kontaktowy: ${req.body.number}`+`<br><br>`+
       `Wiadomość ${req.body.message}`+`<br>`
-    }
-
-    await transporter.sendMail(mailData, function (err, info) {
-      console.log("wysłane")
-      if(err)
-        console.log(err)
-      else
-        console.log(info)
     })
+    
+    console.log("wysłane")
+
     res.status(200)
 
 
