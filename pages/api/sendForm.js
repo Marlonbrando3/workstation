@@ -10,7 +10,7 @@ export default async function sendForm(req, res) {
   })
   
     // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
+    let transporter = await nodemailer.createTransport({
       port: 465,
       host: "mail-serwer141299.lh.pl",
       secure: true, // true for 465, false for other ports
@@ -32,7 +32,7 @@ export default async function sendForm(req, res) {
       `Wiadomość ${req.body.message}`+`<br>`
     }
 
-    transporter.sendMail(mailData, function (err, info) {
+    await transporter.sendMail(mailData, function (err, info) {
       console.log("wysłane")
       if(err)
         console.log(err)
