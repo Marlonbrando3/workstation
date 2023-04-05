@@ -13,7 +13,10 @@ export default async function sendForm(req, res) {
     let transporter = await nodemailer.createTransport({
       port: 465,
       host: "mail-serwer141299.lh.pl",
-      secure: true, // true for 465, false for other ports
+      secure: true,
+      tls: {
+        ciphers: "SSLv3",
+      },
       auth: {
         type: "OAuth2",
         user: 'www@work-station.pl', // generated ethereal user
