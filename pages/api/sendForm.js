@@ -44,7 +44,7 @@ export default async function sendForm(req, res) {
             rejected(err)
           }
           else {
-            res.json({info:info})
+            res.json({info:"poszło"})
           }
         })
     res.status(200)
