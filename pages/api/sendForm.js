@@ -12,8 +12,8 @@ export default async (req, res) => {
         ciphers: "SSLv3",
       },
       auth: {
-        user: "www@work-station.pl", // generated ethereal user
-        pass: "RQC7L@wE", // generated ethereal password
+        user: process.env.MAIL_ADRESS, // generated ethereal user
+        pass: process.env.MAIL_PASS, // generated ethereal password
       },
     })
 
@@ -29,7 +29,7 @@ export default async (req, res) => {
 
     const mailData = {
       from: req.body.email,
-      to: 'www@work-station.pl',
+      to: process.env.MAIL_ADRESS,
       subject: `Wiadomość ze strony od: ${req.body.name}`,
       text: "Hello. This email is for your email verification.",
       html: 
