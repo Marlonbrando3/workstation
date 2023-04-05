@@ -33,7 +33,7 @@ export default function Header() {
     }
 
   return (
-    <div  className='w-screen h-[80px] bg-white fixed'>
+    <div  className='w-screen h-[80px] bg-white fixed shadow-md z-10'>
         <div className='xl:w-[1140px] w-screen h-full  mx-auto flex justify-between items-center'>
             <a href="#" className='h-full w-64 flex items-center ml-3 md:mr-0'>
                     <Image 

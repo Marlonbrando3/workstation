@@ -55,7 +55,7 @@ export default function Contact() {
             <span className='middle-title text-center'>Skontaktuj się z nami</span>
         </div>
          <div className='w-full flex flex-col lg:flex-row px-4 md:p-0'>
-            <form onSubmit={handleSendForm} className='flex flex-col lg:w-1/2 w-full md:mx-10 md:w-10/12 m-auto bg-slate-800 p-8 rounded-md relative shadow-xl'>
+            <form onSubmit={handleSendForm} className='flex flex-col lg:w-1/2 w-full md:mx-10 md:w-10/12 m-auto bg-slate-800 p-8 rounded-md relative shadow-xl z-0'>
                 <div ref={aprovalwindow} className='absolute w-0 h-full bg-green-400 top-0 left-0 duration-300 overflow-hidden'>
                     <p className='absolute top-32 font-bold text-2xl text-center text-white  drop-shadow-md'>Wiadomość wysłana, wkrótce się z Tobą skontaktujemy</p>
                     <div className='absolute top-48 w-[160px] h-full left-0 right-0 mx-auto'><FiCheckCircle className='w-[160px] h-[160px] text-white drop-shadow-md'/></div>
