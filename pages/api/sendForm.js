@@ -23,7 +23,7 @@ export default async (req, res) => {
           return res.json({info:"nie działa bo: "+error})
       } else {
           console.log("Server is ready to take our messages");
-          return res.json({info:"działa"})
+          return res.json({info:"działa: "+success})
       }})
 
 
