@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const nodemailer = require('nodemailer')
 
-export default async (req, res) => {
+export default async function sendForm(req, res) {
   res.status(200).json({ 
     name: req.body.name,
     number: req.body.number,
@@ -21,7 +21,7 @@ export default async (req, res) => {
     })
 
 
-    let mailData = await transporter.sendMail({
+    const mailData = {
       from: req.body.email,
       to: 'www@work-station.pl',
       subject: `Wiadomość ze strony od: ${req.body.name}`,
@@ -31,10 +31,15 @@ export default async (req, res) => {
       `Email kontaktowy: ${req.body.email}`+`<br>`+
       `Telefon kontaktowy: ${req.body.number}`+`<br><br>`+
       `Wiadomość ${req.body.message}`+`<br>`
-    })
-    
-    console.log("wysłane")
+    }
 
+    await new Promise((resolve, rejected) => {transporter.sendMail(mailData, function (err, info) {
+      console.log("wysłane")
+      if(err)
+        console.log(err)
+      else
+        console.log(info)
+    })})
     res.status(200)
 
 
