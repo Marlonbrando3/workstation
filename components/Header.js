@@ -57,7 +57,7 @@ export default function Header() {
                 <MenuIcon className='w-full h-full'/>
             </div>
             <div ref={ClosedBurger} onClick={hideMobileMenu} className='cursor-pointer mr-3 md:mr-12 w-12 h-12 hidden xl:hidden'>
-            <MenuOpenIcon className='w-full h-full'/>
+            <MenuOpenIcon className='w-[100%] h-[100%]'/>
             </div>
         </div>
     </div>
