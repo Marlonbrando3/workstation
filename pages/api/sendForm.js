@@ -33,15 +33,18 @@ export default async function sendForm(req, res) {
       `Wiadomość ${req.body.message}`+`<br>`
     }
 
-    await new Promise((resolve, rejected) => {transporter.sendMail(mailData, function (err, info) {
-      console.log("wysłane")
-      if(err) {
-        console.log(err)
-      }
-      else {
-        console.log(info)
-      }
-    })})
+    await new Promise((resolve, rejected) => {
+      transporter.sendMail(mailData, (err, info) => {
+          console.log("wysłane")
+          if(err) {
+            console.log(err)
+            rejected(err)
+          }
+          else {
+            console.log(info)
+            resolve(info)
+          }
+        })})
     res.status(200)
 
 }
