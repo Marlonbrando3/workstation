@@ -44,7 +44,7 @@ export default function Header() {
             </a>
             <div ref={menu} className='xl:h-full xl:w-[600px] duration-300 xl:-mr-0 right-[-150vw] xl:static absolute xl:top-auto top-20 h-screen w-screen bg-white'>
                 <nav className='h-full'>
-                    <ul className='flex items-center justify-center h-full flex-col xl:flex-row'>
+                    <ul className='flex items-center justify-center h-full flex-col xl:flex-row -mt-16'>
                         <li className='li-item active'><a href="#home" name="home" onClick={handleHideMenu}>Strona główna</a></li>
                         <li className='li-item'><a href="#about-us" onClick={handleHideMenu}>O nas</a></li>
                         <li className='li-item'><a href="#about-us" onClick={handleHideMenu}>W czym pomagamy</a></li>
