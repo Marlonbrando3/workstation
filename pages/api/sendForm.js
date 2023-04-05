@@ -24,6 +24,13 @@ export default async (req, res) => {
       },
     })
 
+    await transporter.verify(function (error, success) {
+      if (error) {
+          console.log(error);
+      } else {
+          console.log("Server is ready to take our messages");
+      }})
+
 
     const mailData = {
       from: req.body.email,
