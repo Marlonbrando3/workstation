@@ -53,8 +53,12 @@ export default function Header() {
                     </ul>
                 </nav>
             </div>
-            <MenuIcon ref={OpenBurger} onClick={showMobileMenu} className='cursor-pointer mr-12 w-12 h-12 visible xl:hidden'/>
-            <MenuOpenIcon ref={ClosedBurger} onClick={hideMobileMenu} className='cursor-pointer mr-12 w-12 h-12 hidden xl:hidden'/>
+            <div ref={OpenBurger} onClick={showMobileMenu} className='cursor-pointer mr-12 w-12 h-12 visible xl:hidden'>
+                <MenuIcon className='w-full h-full'/>
+            </div>
+            <div ref={ClosedBurger} onClick={hideMobileMenu} className='cursor-pointer mr-12 w-12 h-12 hidden xl:hidden'>
+            <MenuOpenIcon className='w-full h-full'/>
+            </div>
         </div>
     </div>
   )
