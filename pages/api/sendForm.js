@@ -47,7 +47,7 @@ export default async (req, res) => {
       }
       else{
         console.log("wysłane: "+info)
-        return res.json({info:"działa: "+info})
+        return res.json({info:"działa to bo: "+info})
     }})
 
 }
