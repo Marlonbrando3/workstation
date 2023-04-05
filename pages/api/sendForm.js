@@ -35,12 +35,13 @@ export default async function sendForm(req, res) {
 
     await new Promise((resolve, rejected) => {transporter.sendMail(mailData, function (err, info) {
       console.log("wysłane")
-      if(err)
+      if(err) {
         console.log(err)
-      else
+      }
+      else {
         console.log(info)
+      }
     })})
     res.status(200)
-
 
 }
