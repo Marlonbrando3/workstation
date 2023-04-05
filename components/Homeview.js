@@ -6,7 +6,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 export default function Homeview() {
   return (
     <div id="home" className='w-screen h-[700px] flex'>
-    <div className="bg-[url('../public/bg-home.jpeg')] bg-cover flex-grow h-[90%] flex items-center rounded-r-[70px]">
+    <div className="bg-[url('../public/bg-home.jpg')] bg-cover flex-grow h-[90%] flex items-center rounded-r-[70px]">
       <div className='w-[1100px] mx-auto'>
         <div className='md:w-[500px] px-4 md:px-auto w-screen flex flex-wrap'>
           <p className='home-view-claim'>Rekrutacje</p>
