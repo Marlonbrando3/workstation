@@ -30,7 +30,7 @@ export default function Aboutus() {
             </div>
             <ul className='lg:w-1/2 md:w-2/3 w-full h-1/2 px-10 flex flex-col justify-center'>
                 <div className='my-4'>
-                     <span className='middle-title my-4'>W czym pomagamy?:</span>
+                     <span className='middle-title my-4'>W czym pomagamy?</span>
                 </div>
                 <li className='desc-article list-disc'>nagłośnieniu oferty pracy poprzez portale oraz grupy tematyczne,</li>
                 <li className='desc-article list-disc'>przedstawieniu oferty stale rosnącej naszej bazie kandydatów,</li>
