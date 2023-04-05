@@ -15,7 +15,7 @@ html{
     }
 
     .li-item{
-        @apply cursor-pointer font-[500] duration-150 px-3 text-lg text-[#1E3654] hover:bg-[#1E3654] hover:text-white uppercase
+        @apply cursor-pointer font-[500] duration-150 px-3 xl:text-lg text-3xl text-[#1E3654] hover:bg-[#1E3654] hover:text-white uppercase
     }
 
     .active{

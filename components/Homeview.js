@@ -16,7 +16,8 @@ export default function Homeview() {
           <p className='home-view-claim'>Doradztwo persnalone</p>
           <p className='home-view-claim'>Szkolenia BHP</p>
         </div>
-        <button className='border mx-5 md:mx-auto bg-slate-800 text-white text-2xl mt-5 px-5 py-2 rounded-md cursor pointer duration-300 hover:text-white hover:bg-green-400'>Zapytaj o ofertę</button>
+        <button className='border mx-5 md:mx-5 bg-slate-800 text-white text-2xl mt-5 px-5 py-2 rounded-md cursor pointer duration-300 hover:text-white hover:bg-green-400'>
+          <a href="#contact">Zapytaj o ofertę</a></button>
       </div>
     </div>
     <a href="#about-us">
