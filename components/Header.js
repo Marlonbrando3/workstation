@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 import { useRef } from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
-import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import { HiMenu } from 'react-icons/hi'
+import { HiMenuAlt1 } from 'react-icons/hi'
 
 export default function Header() {
 
@@ -54,10 +54,10 @@ export default function Header() {
                 </nav>
             </div>
             <div ref={OpenBurger} onClick={showMobileMenu} className='cursor-pointer mr-3 md:mr-12 w-12 h-12 visible xl:hidden'>
-                <MenuIcon className='w-[100%] h-[100%] block'/>
+                <HiMenu className='w-[100%] h-[100%] block'/>
             </div>
             <div ref={ClosedBurger} onClick={hideMobileMenu} className='cursor-pointer mr-3 md:mr-12 w-12 h-12 hidden xl:hidden'>
-            <MenuOpenIcon className='w-[100%] h-[100%] block'/>
+            <HiMenuAlt1 className='w-[100%] h-[100%] block'/>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
-import { data } from 'autoprefixer';
+// import { data } from 'autoprefixer';
 import React from 'react'
-import { useRef } from 'react'
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { useRef } from 'react';
+import { FiCheckCircle } from 'react-icons/fi'
 
 
 export default function Contact() {
@@ -58,7 +58,7 @@ export default function Contact() {
             <form onSubmit={handleSendForm} className='flex flex-col lg:w-1/2 w-full md:mx-10 md:w-10/12 m-auto bg-slate-800 p-8 rounded-md relative'>
                 <div ref={aprovalwindow} className='absolute w-0 h-full bg-green-400 top-0 left-0 duration-300 overflow-hidden'>
                     <p className='absolute top-32 font-bold text-2xl text-center text-white  drop-shadow-md'>Wiadomość wysłana, wkrótce się z Tobą skontaktujemy</p>
-                    <div className='absolute top-48 w-[160px] h-full left-0 right-0 mx-auto'><CheckCircleIcon className='w-[160px] h-[160px] text-white drop-shadow-md'/></div>
+                    <div className='absolute top-48 w-[160px] h-full left-0 right-0 mx-auto'><FiCheckCircle className='w-[160px] h-[160px] text-white drop-shadow-md'/></div>
                 </div>
                 <input required ref={name} className="form-input" placeholder="Imię i nazwisko / nazwa firmy" type="text" name="name"></input>
                 <input required ref={number} className="form-input" placeholder="Numer telefonu do kontaktu" type="number" name="phone"></input>
