@@ -14,11 +14,7 @@ export default async function sendForm(req, res) {
       port: 465,
       host: "mail-serwer141299.lh.pl",
       secure: true, // true for 465, false for other ports
-      tls: {
-        ciphers: "SSLv3",
-      },
       auth: {
-        type: "OAuth2",
         user: 'www@work-station.pl', // generated ethereal user
         pass: 'RQC7L@wE', // generated ethereal password
       },
@@ -37,16 +33,14 @@ export default async function sendForm(req, res) {
       `Wiadomość ${req.body.message}`+`<br>`
     }
 
-    await transporter.sendMail(mailData, (err, info) => {
-          console.log("wysłane")
-          if(err) {
-            res.json({error:err})
-            rejected(err)
-          }
-          else {
-            res.json({info:"poszło"})
-          }
-        })
+    await transporter.sendMail(mailData, function (err, info) {
+      console.log("wysłane")
+      if(err)
+        res.json({info: "błąd"})
+      else
+        res.json({info: "poszło"})
+    })
     res.status(200)
+
 
 }
