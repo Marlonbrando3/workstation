@@ -1,5 +1,8 @@
+import { data } from 'autoprefixer';
 import React from 'react'
 import { useRef } from 'react'
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
 
 export default function Contact() {
 
@@ -7,6 +10,7 @@ export default function Contact() {
     const number = useRef();
     const email = useRef();
     const message = useRef();
+    const aprovalwindow = useRef();
 
     const handleSendForm = (e) => {
         e.preventDefault();
@@ -23,11 +27,24 @@ export default function Contact() {
                     email: email.current.value,
                     message: message.current.value,
                 })
-            }
-        
-        
-        
-        )
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.info === "sendet"){
+                    console.log("wysłano maila")
+                    aprovalwindow.current.style.width = "100%"
+
+                    setTimeout(() => {
+                        aprovalwindow.current.style.width = "0px"
+
+                    },5000)
+                } else {
+                    console.log("niewysłano ")
+                }
+            })
+
+
+
     }
 
   return (
@@ -38,14 +55,18 @@ export default function Contact() {
             <span className='middle-title text-center'>Skontaktuj się z nami</span>
         </div>
          <div className='w-full flex flex-col lg:flex-row px-4 md:p-0'>
-            <form onSubmit={handleSendForm} className='flex flex-col lg:w-1/2 w-full m-auto bg-slate-800 p-8 rounded-md'>
+            <form onSubmit={handleSendForm} className='flex flex-col lg:w-1/2 w-full md:mx-10 md:w-10/12 m-auto bg-slate-800 p-8 rounded-md relative'>
+                <div ref={aprovalwindow} className='absolute w-0 h-full bg-green-400 top-0 left-0 duration-300 overflow-hidden'>
+                    <p className='absolute top-32 font-bold text-2xl text-center text-white  drop-shadow-md'>Wiadomość wysłana, wkrótce się z Tobą skontaktujemy</p>
+                    <div className='absolute top-48 w-[160px] h-full left-0 right-0 mx-auto'><CheckCircleIcon className='w-[160px] h-[160px] text-white drop-shadow-md'/></div>
+                </div>
                 <input required ref={name} className="form-input" placeholder="Imię i nazwisko / nazwa firmy" type="text" name="name"></input>
                 <input required ref={number} className="form-input" placeholder="Numer telefonu do kontaktu" type="number" name="phone"></input>
                 <input required ref={email} className="form-input" placeholder="Adres emial do kontaktu" type="mail" name="email"></input>
                 <textarea required ref={message} className='textarea' type="text" placeholder="Napisz nam jak możemy Ci pomóc np. jakiego rodzaju pracowników potrzebujesz i ilu."></textarea>
-                <div className='flex items-start justify-start h-20'>
-                    <input required id="rodo" type='checkbox'></input>
-                    <div className='text-white text-[12px] pl-2 leading-3'>Wyrażam zgodę na zasady polityki prywatności oraz przetwarzanie danhych przez firmę Onesta Group Sp. z o.o. z siedzibą We Wrocławiu </div>
+                <div className='flex'>
+                    <input required  id="rodo" type='checkbox' className='cursor-pointer w-12 h-6'></input>
+                    <div className='text-white text-[14px] pl-2 leading-4'>Wyrażam zgodę na zasady polityki prywatności oraz przetwarzanie danych przez firmę Onesta Group Sp. z o.o. z siedzibą We Wrocławiu </div>
                 </div>
                 <button className='bg-green-400 border border-green-400 w-[240px] mx-auto py-2 duration-150 rounded-md font-semibold text-white hover:bg-slate-800 hover:border-white'>Wyślij wiadomość</button>
             </form>

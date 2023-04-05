@@ -42,12 +42,12 @@ export default async (req, res) => {
     await transporter.sendMail(mailData, function (err, info) {
       console.log("wysyłam")
       if(err){
-        console.log("błąd: " +err)
-        return res.json({info:"nie działa bo: "+err})
+        // console.log("błąd: " +err)
+        return res.json({info:"unsended"})
       }
       else{
-        console.log("wysłane: "+info)
-        return res.json({info:"działa to bo: "+info})
+        // console.log("działa")
+        return res.json({info:"sendet"})
     }})
 
 }
