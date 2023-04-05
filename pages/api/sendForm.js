@@ -18,7 +18,6 @@ export default async function sendForm(req, res) {
         ciphers: "SSLv3",
       },
       auth: {
-        type: "OAuth2",
         user: 'www@work-station.pl', // generated ethereal user
         pass: 'RQC7L@wE', // generated ethereal password
       },
@@ -38,11 +37,11 @@ export default async function sendForm(req, res) {
     }
 
     await transporter.sendMail(mailData, function (err, info) {
-      console.log("wysłane")
+      console.log("wysyłam")
       if(err)
-        res.json({info: "błąd"})
+        console.log("błąd: " +err)
       else
-        res.json({info: "poszło"})
+        console.log("wysłane: "+info)
     })
     res.status(200)
 
