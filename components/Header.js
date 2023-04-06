@@ -42,14 +42,14 @@ export default function Header() {
                         height={120}
                     />
             </a>
-            <div ref={menu} className='xl:h-full xl:w-[600px] duration-300 xl:-mr-0 right-[-150vw] xl:static absolute xl:top-auto top-20 h-screen w-screen bg-white'>
+            <div ref={menu} className='xl:h-full xl:w-[800px] duration-300 xl:-mr-0 right-[-150vw] xl:static absolute xl:top-auto top-20 h-screen w-screen bg-white'>
                 <nav className='h-full'>
-                    <ul className='flex items-center justify-center h-full flex-col xl:flex-row -mt-10 md:m-0'>
+                    <ul className='flex items-center justify-center h-full flex-col xl:flex-row -mt-10 md:my-0 md:-mr-20'>
                         <li className='li-item active'><a href="#home" name="home" onClick={handleHideMenu}>Strona główna</a></li>
                         <li className='li-item'><a href="#about-us" onClick={handleHideMenu}>O nas</a></li>
                         <li className='li-item'><a href="#about-us" onClick={handleHideMenu}>W czym pomagamy</a></li>
-                        {/* <li className='li-item'>Oferta</li> */}
                         <li className='li-item'><a href="#contact" onClick={handleHideMenu}>Kontakt</a></li>
+                        <li className='li-item bg-red-500 text-white'><Link href="/candidates" onClick={handleHideMenu}>Dla kandytatów</Link></li>
                     </ul>
                 </nav>
             </div>
