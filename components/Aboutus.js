@@ -20,7 +20,7 @@ export default function Aboutus() {
                     height={1000}
                 />
             </div>
-            <div className='w-full h-24'></div>
+            <div id="where" className='w-full h-24'></div>
             <div className='lg:w-1/2 lg:h-1/2 w-1/3 hidden md:block'>
             <Image className='object-cover w-full h-full'
                     src="/recruitment.jpeg"
@@ -38,6 +38,20 @@ export default function Aboutus() {
                 <li className='desc-article list-disc'>prowadzenie dokumentacji kadrowo-płacowej,</li>
             <p className='desc-article'>W skrócie znajdziemy dla Ciebie odpowiedniego pracownika.</p>
             </ul>
+            <div className='w-full h-24'></div>
+            <div className='lg:w-1/2 md:w-2/3 w-full h-1/2 px-10 flex flex-col justify-center'>
+                <div className='my-4'>
+                     <span className='middle-title'>Gdzie działamy?</span>
+                </div>
+                <p className='desc-article'>Jako <strong>Osoby poszukujące pracy w Namysłowie, Kluczborku, Brzegu, Oławie, Oleśnicy, Kępnie lub Wołczynie</strong> wraz z oklicami tych miast mogą zarejestrować się naszej bazie kandydatów. Jako agencja pracy również działamy na tym regionie i jesteśmy otwarci na nowe wspołprace z firmami, które zapraszamy do kontaktu.</p>
+            </div>
+            <div className='lg:w-1/2 lg:h-1/2 w-1/3 hidden md:block'>
+                <Image className='object-cover w-full h-full'
+                    src="/agencja-pracy-namyslow.jpeg"
+                    width={1000}
+                    height={1000}
+                />
+            </div>
         </div>
     </div>
     </>

@@ -47,7 +47,7 @@ export default function Header() {
                     <ul className='flex items-center justify-center h-full flex-col xl:flex-row -mt-10 md:my-0 md:-mr-20'>
                         <li className='li-item active'><Link href="/#home" name="home" onClick={handleHideMenu}>Strona główna</Link></li>
                         <li className='li-item'><Link href="/#about-us" onClick={handleHideMenu}>O nas</Link></li>
-                        <li className='li-item'><Link href="/#about-us" onClick={handleHideMenu}>W czym pomagamy</Link></li>
+                        <li className='li-item'><Link href="/#where" onClick={handleHideMenu}>Gdzie i jak?</Link></li>
                         <li className='li-item'><Link href="/#contact" onClick={handleHideMenu}>Kontakt</Link></li>
                         <li className='li-item bg-red-500 text-white'><Link href="/candidates" onClick={handleHideMenu}>Dla kandytatów</Link></li>
                     </ul>
