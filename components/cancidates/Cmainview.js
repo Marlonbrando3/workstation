@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head';
 import { useRef } from 'react'
 import { FiCheckCircle } from 'react-icons/fi'
 
