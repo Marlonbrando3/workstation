@@ -35,13 +35,13 @@ export default function Header() {
   return (
     <div className='w-screen h-[80px] bg-white fixed shadow-md z-10'>
         <div className='xl:w-[1140px] w-screen h-full  mx-auto flex justify-between items-center'>
-            <a href="/" className='h-full w-64 flex items-center ml-3 md:mr-0'>
+            <Link href="/" className='h-full w-64 flex items-center ml-3 md:mr-0'>
                     <Image 
                         src="/work-station-logo-blue-centered.png"
                         width={120}
                         height={120}
                     />
-            </a>
+            </Link>
             <div ref={menu} className='xl:h-full xl:w-[800px] duration-300 xl:-mr-0 right-[-150vw] xl:static absolute xl:top-auto top-20 h-screen w-screen bg-white'>
                 <nav className='h-full'>
                     <ul className='flex items-center justify-center h-full flex-col xl:flex-row -mt-10 md:my-0 md:-mr-20'>
