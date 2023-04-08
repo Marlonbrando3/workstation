@@ -47,7 +47,14 @@ export default function Cmainview() {
     }
 
   return (
-    <div>
+    <>
+        <Head>
+        <title>Praca w woj.opolskim</title>
+        <meta name="description" content="Szukasz pracy w Namysłowie, Kluczborku, Oławie, Kępnie lub innych pobliskich miastach? Jesteś pracodawcą który szuka pracowników do swojej firmy? Zostaw nam kontakt." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1, maximum-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
         <div className='pt-40 xl:w-[1140px] mx-auto px-10'>
             <div className='text-xl mb-4'>
                 Jeśli interesuje Cię praca w Namysłowie, Kluczborku, Brzegu, Olesnicy, Kępnie, Oławie, Wołczynie i okolicach oraz częściowo może bezpłatnie zarejestrować się w naszej bazie kandydatów.
@@ -73,6 +80,6 @@ export default function Cmainview() {
                 <button className='bg-green-400 border border-green-400 w-[240px] mx-auto py-2 duration-150 rounded-md font-semibold text-white hover:bg-slate-800 hover:border-white'>Wyślij wiadomość</button>
             </form>
         </div>
-    </div>
+    </>
   )
 }
