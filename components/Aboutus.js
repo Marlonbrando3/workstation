@@ -11,11 +11,11 @@ export default function Aboutus() {
                 <div className='my-4'>
                      <span className='middle-title'>Kim jesteśmy?</span>
                 </div>
-                <p className='desc-article'>Jesteśmy nową agencja pośrednictwa pracy oraz doradztwa personalnego. Mamy za sobą duże doświadczenie zawodowe w rektureacji, szkoleniu i zarządzaniu pracownikami. Mamy pomysł jak docierać do pracowników, którzy szukają zatrudnienia, rekrutować ich oraz dostarczać kandydatów spełniających oczekiwania. Nasze doświadczenie dowiodło, że empatia, dobry plan i wiedza o firme tj. zrozumienie potrzeb naszych klientów oraz elastyczność to klucz do udanej rekrutacji i niskiej rotacji. </p>
+                <h1 className='desc-article'>Jesteśmy nową agencją pośrednictwa pracy oraz doradztwa personalnego.</h1><p className='desc-article'>Mamy za sobą duże doświadczenie zawodowe w rektureacji, szkoleniu i zarządzaniu pracownikami. Mamy pomysł jak docierać do pracowników, którzy szukają zatrudnienia, rekrutować ich oraz dostarczać kandydatów spełniających oczekiwania. Nasze doświadczenie dowiodło, że empatia, dobry plan i wiedza o firme tj. zrozumienie potrzeb naszych klientów oraz elastyczność to klucz do udanej rekrutacji i niskiej rotacji. </p>
             </div>
             <div className='lg:w-1/2 lg:h-1/2 w-1/3 hidden md:block'>
                 <Image className='object-cover w-full h-full'
-                    src="/team-about-us.jpeg"
+                    src="/agencja-pracy-team.jpeg"
                     width={1000}
                     height={1000}
                 />
@@ -23,7 +23,7 @@ export default function Aboutus() {
             <div id="where" className='w-full h-24'></div>
             <div className='lg:w-1/2 lg:h-1/2 w-1/3 hidden md:block'>
             <Image className='object-cover w-full h-full'
-                    src="/recruitment.jpeg"
+                    src="/agencja-pracy-recruitment.jpeg"
                     width={1000}
                     height={1000}
                 />
@@ -43,7 +43,8 @@ export default function Aboutus() {
                 <div className='my-4'>
                      <span className='middle-title'>Gdzie działamy?</span>
                 </div>
-                <p className='desc-article'>Jako <strong>Osoby poszukujące pracy w Namysłowie, Kluczborku, Brzegu, Oławie, Oleśnicy, Kępnie lub Wołczynie</strong> wraz z oklicami tych miast mogą zarejestrować się naszej bazie kandydatów. Jako agencja pracy również działamy na tym regionie i jesteśmy otwarci na nowe wspołprace z firmami, które zapraszamy do kontaktu.</p>
+                <h1 className='desc-article'>Poszukujesz pracy w Namysłowie, Kluczborku, Brzegu, Oławie, Oleśnicy, Kępnie lub Wołczynie lub okolicach?</h1>
+                <p className='desc-article'>Zarejestruj się naszej bazie kandydatów. Jako agencja pracy również działamy na tym regionie i jesteśmy otwarci na nowe wspołprace z firmami, które zapraszamy do kontaktu.</p>
             </div>
             <div className='lg:w-1/2 lg:h-1/2 w-1/3 hidden md:block'>
                 <Image className='object-cover w-full h-full'

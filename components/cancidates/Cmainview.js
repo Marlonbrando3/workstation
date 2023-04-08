@@ -50,7 +50,7 @@ export default function Cmainview() {
     <div>
         <div className='pt-40 xl:w-[1140px] mx-auto px-10'>
             <div className='text-xl mb-4'>
-                Jeśli jesteś osobą poszukującą pracy na terenie woj. opolskiego, dolnośląskiego, śląskiego, małopolskiego może bezpłatnie zarejestrować się w naszej bazie kandydatów.
+                Jeśli interesuje Cię praca w Namysłowie, Kluczborku, Brzegu, Olesnicy, Kępnie, Oławie, Wołczynie i okolicach oraz częściowo może bezpłatnie zarejestrować się w naszej bazie kandydatów.
                 W przypadku zainteresowania pracodawców współpracujących z naszą Agencją zatrudnieniem kandydatów takich jak Ty - powiadomimy Cię o tym mailowo lub telefonicznie.
                 Uzupełnij podstawowe dane kontaktowe, w odpowiedzi na Twoje zgłoszenie - skontaktujemy się z Tobą mailowo aby zapytać o szczegółowe informacje.
             </div>
